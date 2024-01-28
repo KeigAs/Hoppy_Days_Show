@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8e7qiy0a4the"]
+
+[ext_resource type="PackedScene" uid="uid://cmh45mjfe0xo7" path="res://Menues/GameOver.tscn" id="1"]
+[ext_resource type="FontFile" uid="uid://cglwcc7r2xid8" path="res://Fonts/candles_.ttf" id="2"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="StartGame" instance=ExtResource("1")]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" parent="Background" index="0"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" parent="Background" index="1"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect3" parent="Background" index="2"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect4" parent="Background" index="3"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" parent="." index="1"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+
+[node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
+text = "Hoppy Days"
+
+[node name="Name" parent="." index="2"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Version" parent="." index="3"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 1.0
+offset_bottom = 23.0
+
+[node name="Label" type="Label" parent="." index="4"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 734.0
+offset_top = 230.0
+offset_right = -71.0
+offset_bottom = -144.0
+theme_override_colors/font_color = Color(0.313726, 0.662745, 0.141176, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("1")
+text = "Controls:
+W, A, D, Space
+or
+Arrow Keys"

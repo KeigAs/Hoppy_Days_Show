@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GFX/Background/bg_layer3.png" type="Texture2D" id=1]
+[ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture2D" id=2]
+[ext_resource path="res://GFX/Background/bg_layer2.png" type="Texture2D" id=3]
+[ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture2D" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scale = Vector2( 0.7, 0.7 )
+transform = Transform2D( 0.7, 0, 0, 0.7, 0, 0 )
+scroll_base_offset = Vector2( 0, -700 )
+scroll_base_scale = Vector2( 0.75, 0.75 )
+scroll_ignore_camera_zoom = true
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="TextureRect" type="TextureRect" parent="Sky"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+motion_offset = Vector2( 0, -100 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Clouds"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tree_Background" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1.2, 1.2 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Tree_Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tree_Front" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1.5, 1.4 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Tree_Front"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
